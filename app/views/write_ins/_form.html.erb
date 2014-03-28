@@ -1,0 +1,25 @@
+<%= form_for(@write_in) do |f| %>
+  <% if @write_in.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@write_in.errors.count, "error") %> prohibited this write_in from being saved:</h2>
+
+      <ul>
+      <% @write_in.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :address %><br>
+    <%= f.text_field :address %>
+  </div>
+  <div class="field">
+    <%= f.label :input %><br>
+    <%= f.text_field :input %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

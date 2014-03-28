@@ -1,0 +1,690 @@
+  [1m[36m (2.6ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (2.6ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateJData (20140216015102)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (2.2ms)[0m  [1mCREATE TABLE "j_data" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "jInput" text, "jOutput" text, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140216015102"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 10.0.2.2 at 2014-03-01 23:37:19 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by JDataController#index as HTML
+  [1m[35mJDatum Load (1.0ms)[0m  SELECT "j_data".* FROM "j_data"
+  Rendered j_data/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 534ms (Views: 505.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/j_data.css?body=1" for 10.0.2.2 at 2014-03-01 23:37:20 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2014-03-01 23:37:20 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2014-03-01 23:37:20 +0000
+
+
+Started GET "/css/bootstrap.min.css" for 10.0.2.2 at 2014-03-01 23:37:20 +0000
+
+ActionController::RoutingError (No route matches [GET] "/css/bootstrap.min.css"):
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/vagrant/.rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/vagrant/.rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/vagrant/.rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.3ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.1ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (7.9ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (24.2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2014-03-01 23:37:20 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2014-03-01 23:37:20 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2014-03-01 23:37:20 +0000
+
+
+Started GET "/assets/j_data.js?body=1" for 10.0.2.2 at 2014-03-01 23:37:20 +0000
+
+
+Started GET "/js/bootstrap.min.js" for 10.0.2.2 at 2014-03-01 23:37:20 +0000
+
+ActionController::RoutingError (No route matches [GET] "/js/bootstrap.min.js"):
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/vagrant/.rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/vagrant/.rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/vagrant/.rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.4ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (13.7ms)
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2014-03-01 23:37:20 +0000
+
+
+Started GET "/j_data/new" for 10.0.2.2 at 2014-03-01 23:37:23 +0000
+Processing by JDataController#new as HTML
+  Rendered j_data/_form.html.erb (15.5ms)
+  Rendered j_data/new.html.erb within layouts/application (30.7ms)
+Completed 200 OK in 84ms (Views: 81.6ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/j_data" for 10.0.2.2 at 2014-03-01 23:37:25 +0000
+Processing by JDataController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2MVDF2gaiW1qeexvhiU0uq1mENhTsRNQ5lM48o24LRQ=", "j_datum"=>{"jInput"=>"asdfasdf"}, "commit"=>"Create J datum"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Completed 500 Internal Server Error in 2ms
+
+JSON::ParserError (757: unexpected token at 'asdfasdf'):
+  app/models/j_datum.rb:16:in `setoutput'
+  app/controllers/j_data_controller.rb:30:in `block in create'
+  app/controllers/j_data_controller.rb:29:in `create'
+
+
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.4ms)
+
+
+Started POST "/j_data" for 10.0.2.2 at 2014-03-01 23:37:47 +0000
+Processing by JDataController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2MVDF2gaiW1qeexvhiU0uq1mENhTsRNQ5lM48o24LRQ=", "j_datum"=>{"jInput"=>"{\r\n  \"company\": \"Eye Street Solutions LLC\",\r\n  \"startDate\": \"04.1998\",\r\n  \"endDate\": \"N/A\",\r\n  \"PositionA\": \"IT Systems Manager\",\r\n  \"ExpierienceA\": [\r\n    \"•   Coordinated software development and testing activities throughout project release lifecycle\",\r\n    \"•    Coordinated  and scheduled project releases and other maintenance activities\",\r\n    \"•    Conducted meetings with clients to discuss needs, define scope of software development efforts, provide status of on-going efforts\",\r\n    \"•    Tracked resource utilization and project budget burn rate for several distinct projects for multiple groups within FEMA\",\r\n    \"•    Participated in screening and selection of candidates for open positions \"\r\n  ],\r\n  \"PositionB\": \"Senior Software Engineer\",\r\n  \"ExpierienceB\": [\r\n    \"•    Provided continuous support of FEMA.gov website and FEMA.gov applications, performed on-demand troubleshooting and user problem resolution.  \",\r\n    \"•    Collected functionality requirements from users and used them to create design documents.  Communicated best practices in IT implementation to user groups and FEMA IT team member in order to optimize resulting solutions.  Performed subsequent application design and implementation.  Insured compliance with various security policies and procedures.  \",\r\n    \"•    Conducted meetings and user training sessions.\",\r\n    \"•    Designed and developed a Ruby on Rails application with Oracle relational database in order to catalog and audit system components of FEMA.gov and related systems\",\r\n    \"•    Designed and developed over 25 web-based applications and the corresponding Administration Tools using JSP/Struts and Servlet-based architecture with Oracle relational database.  Functionality included validated data entry, administrative and reporting tools with secured access.  Subsequent releases included functional and security enhancements as well as further functionality enhancements. \"\r\n  ]\r\n}"}, "commit"=>"Create J datum"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (8.6ms)[0m  INSERT INTO "j_data" ("created_at", "jInput", "jOutput", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Sat, 01 Mar 2014 23:37:47 UTC +00:00], ["jInput", "{\r\n  \"company\": \"Eye Street Solutions LLC\",\r\n  \"startDate\": \"04.1998\",\r\n  \"endDate\": \"N/A\",\r\n  \"PositionA\": \"IT Systems Manager\",\r\n  \"ExpierienceA\": [\r\n    \"•   Coordinated software development and testing activities throughout project release lifecycle\",\r\n    \"•    Coordinated  and scheduled project releases and other maintenance activities\",\r\n    \"•    Conducted meetings with clients to discuss needs, define scope of software development efforts, provide status of on-going efforts\",\r\n    \"•    Tracked resource utilization and project budget burn rate for several distinct projects for multiple groups within FEMA\",\r\n    \"•    Participated in screening and selection of candidates for open positions \"\r\n  ],\r\n  \"PositionB\": \"Senior Software Engineer\",\r\n  \"ExpierienceB\": [\r\n    \"•    Provided continuous support of FEMA.gov website and FEMA.gov applications, performed on-demand troubleshooting and user problem resolution.  \",\r\n    \"•    Collected functionality requirements from users and used them to create design documents.  Communicated best practices in IT implementation to user groups and FEMA IT team member in order to optimize resulting solutions.  Performed subsequent application design and implementation.  Insured compliance with various security policies and procedures.  \",\r\n    \"•    Conducted meetings and user training sessions.\",\r\n    \"•    Designed and developed a Ruby on Rails application with Oracle relational database in order to catalog and audit system components of FEMA.gov and related systems\",\r\n    \"•    Designed and developed over 25 web-based applications and the corresponding Administration Tools using JSP/Struts and Servlet-based architecture with Oracle relational database.  Functionality included validated data entry, administrative and reporting tools with secured access.  Subsequent releases included functional and security enhancements as well as further functionality enhancements. \"\r\n  ]\r\n}"], ["jOutput", "company : Eye Street Solutions LLC\nstartDate : 04.1998\nendDate : N/A\nPositionA : IT Systems Manager\nExpierienceA : \n<DL><DD>- • Coordinated software development and testing activities throughout project release lifecycle \n</DD><DD>- • Coordinated and scheduled project releases and other maintenance activities \n</DD><DD>- • Conducted meetings with clients to discuss needs, define scope of software development efforts,provide status of on-going efforts \n</DD><DD>- • Tracked resource utilization and project budget burn rate for several distinct projects formultiple groups within FEMA \n</DD><DD>- • Participated in screening and selection of candidates for open positions \n</DD></DL>PositionB : Senior Software Engineer\nExpierienceB : \n<DL><DD>- • Provided continuous support of FEMA.gov website and FEMA.gov applications, performed on-demand troubleshooting anduser problem resolution. \n</DD><DD>- • Collected functionality requirements from users and used them to create design documents. Communicatedbest practices in IT implementation to user groups and FEMA IT team member inorder to optimize resulting solutions. Performed subsequent application design and implementation. Insured compliance withvarious security policies and procedures. \n</DD><DD>- • Conducted meetings and user training sessions. \n</DD><DD>- • Designed and developed a Ruby on Rails application with Oracle relational database inorder to catalog and audit system components of FEMA.gov and related systems \n</DD><DD>- • Designed and developed over 25 web-based applications and the corresponding Administration Tools usingJSP/Struts and Servlet-based architecture with Oracle relational database. Functionality included validated data entry, administrativeand reporting tools with secured access. Subsequent releases included functional and security enhancements aswell as further functionality enhancements. \n</DD></DL>"], ["updated_at", Sat, 01 Mar 2014 23:37:47 UTC +00:00]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/j_data/1
+Completed 302 Found in 16ms (ActiveRecord: 10.6ms)
+
+
+Started GET "/j_data/1" for 10.0.2.2 at 2014-03-01 23:37:47 +0000
+Processing by JDataController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mJDatum Load (0.5ms)[0m  SELECT "j_data".* FROM "j_data" WHERE "j_data"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered j_data/show.html.erb within layouts/application (40.9ms)
+Completed 200 OK in 90ms (Views: 85.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/j_data.css?body=1" for 10.0.2.2 at 2014-03-01 23:37:47 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2014-03-01 23:37:47 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2014-03-01 23:37:47 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2014-03-01 23:37:47 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2014-03-01 23:37:47 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2014-03-01 23:37:48 +0000
+
+
+Started GET "/assets/j_data.js?body=1" for 10.0.2.2 at 2014-03-01 23:37:48 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2014-03-01 23:37:48 +0000
+
+
+Started GET "/" for 10.0.2.2 at 2014-03-07 05:25:05 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by JDataController#index as HTML
+  [1m[35mJDatum Load (1.0ms)[0m  SELECT "j_data".* FROM "j_data"
+  Rendered j_data/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 302ms (Views: 270.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/j_data.css?body=1" for 10.0.2.2 at 2014-03-07 05:25:06 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2014-03-07 05:25:06 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2014-03-07 05:25:06 +0000
+
+
+Started GET "/css/bootstrap.min.css" for 10.0.2.2 at 2014-03-07 05:25:06 +0000
+
+ActionController::RoutingError (No route matches [GET] "/css/bootstrap.min.css"):
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/vagrant/.rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/vagrant/.rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/vagrant/.rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.3ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (11.8ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (32.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2014-03-07 05:25:06 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2014-03-07 05:25:06 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2014-03-07 05:25:06 +0000
+
+
+Started GET "/assets/j_data.js?body=1" for 10.0.2.2 at 2014-03-07 05:25:06 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2014-03-07 05:25:06 +0000
+
+
+Started GET "/js/bootstrap.min.js" for 10.0.2.2 at 2014-03-07 05:25:06 +0000
+
+ActionController::RoutingError (No route matches [GET] "/js/bootstrap.min.js"):
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/vagrant/.rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/vagrant/.rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/vagrant/.rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.9ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.5ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (15.6ms)
+
+
+Started GET "/j_data/new" for 10.0.2.2 at 2014-03-07 05:25:15 +0000
+Processing by JDataController#new as HTML
+  Rendered j_data/_form.html.erb (22.3ms)
+  Rendered j_data/new.html.erb within layouts/application (38.9ms)
+Completed 200 OK in 91ms (Views: 90.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/j_data" for 10.0.2.2 at 2014-03-07 05:25:27 +0000
+Processing by JDataController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jLbbIbo8trTuWVJpqJZCdalF1nY2lM5dfUeXXNnWKZs=", "j_datum"=>{"jInput"=>"{\r\n  \"company\": \"Eye Street Solutions LLC\",\r\n  \"startDate\": \"04.1998\",\r\n  \"endDate\": \"N/A\",\r\n  \"PositionA\": \"IT Systems Manager\",\r\n  \"ExpierienceA\": [\r\n    \"•   Coordinated software development and testing activities throughout project release lifecycle\",\r\n    \"•    Coordinated  and scheduled project releases and other maintenance activities\",\r\n    \"•    Conducted meetings with clients to discuss needs, define scope of software development efforts, provide status of on-going efforts\",\r\n    \"•    Tracked resource utilization and project budget burn rate for several distinct projects for multiple groups within FEMA\",\r\n    \"•    Participated in screening and selection of candidates for open positions \"\r\n  ],\r\n  \"PositionB\": \"Senior Software Engineer\",\r\n  \"ExpierienceB\": [\r\n    \"•    Provided continuous support of FEMA.gov website and FEMA.gov applications, performed on-demand troubleshooting and user problem resolution.  \",\r\n    \"•    Collected functionality requirements from users and used them to create design documents.  Communicated best practices in IT implementation to user groups and FEMA IT team member in order to optimize resulting solutions.  Performed subsequent application design and implementation.  Insured compliance with various security policies and procedures.  \",\r\n    \"•    Conducted meetings and user training sessions.\",\r\n    \"•    Designed and developed a Ruby on Rails application with Oracle relational database in order to catalog and audit system components of FEMA.gov and related systems\",\r\n    \"•    Designed and developed over 25 web-based applications and the corresponding Administration Tools using JSP/Struts and Servlet-based architecture with Oracle relational database.  Functionality included validated data entry, administrative and reporting tools with secured access.  Subsequent releases included functional and security enhancements as well as further functionality enhancements. \"\r\n  ]\r\n}"}, "commit"=>"Create J datum"}
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (12.9ms)[0m  INSERT INTO "j_data" ("created_at", "jInput", "jOutput", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Fri, 07 Mar 2014 05:25:27 UTC +00:00], ["jInput", "{\r\n  \"company\": \"Eye Street Solutions LLC\",\r\n  \"startDate\": \"04.1998\",\r\n  \"endDate\": \"N/A\",\r\n  \"PositionA\": \"IT Systems Manager\",\r\n  \"ExpierienceA\": [\r\n    \"•   Coordinated software development and testing activities throughout project release lifecycle\",\r\n    \"•    Coordinated  and scheduled project releases and other maintenance activities\",\r\n    \"•    Conducted meetings with clients to discuss needs, define scope of software development efforts, provide status of on-going efforts\",\r\n    \"•    Tracked resource utilization and project budget burn rate for several distinct projects for multiple groups within FEMA\",\r\n    \"•    Participated in screening and selection of candidates for open positions \"\r\n  ],\r\n  \"PositionB\": \"Senior Software Engineer\",\r\n  \"ExpierienceB\": [\r\n    \"•    Provided continuous support of FEMA.gov website and FEMA.gov applications, performed on-demand troubleshooting and user problem resolution.  \",\r\n    \"•    Collected functionality requirements from users and used them to create design documents.  Communicated best practices in IT implementation to user groups and FEMA IT team member in order to optimize resulting solutions.  Performed subsequent application design and implementation.  Insured compliance with various security policies and procedures.  \",\r\n    \"•    Conducted meetings and user training sessions.\",\r\n    \"•    Designed and developed a Ruby on Rails application with Oracle relational database in order to catalog and audit system components of FEMA.gov and related systems\",\r\n    \"•    Designed and developed over 25 web-based applications and the corresponding Administration Tools using JSP/Struts and Servlet-based architecture with Oracle relational database.  Functionality included validated data entry, administrative and reporting tools with secured access.  Subsequent releases included functional and security enhancements as well as further functionality enhancements. \"\r\n  ]\r\n}"], ["jOutput", "company : Eye Street Solutions LLC\nstartDate : 04.1998\nendDate : N/A\nPositionA : IT Systems Manager\nExpierienceA : \n<DL><DD>- • Coordinated software development and testing activities throughout project release lifecycle \n</DD><DD>- • Coordinated and scheduled project releases and other maintenance activities \n</DD><DD>- • Conducted meetings with clients to discuss needs, define scope of software development efforts,provide status of on-going efforts \n</DD><DD>- • Tracked resource utilization and project budget burn rate for several distinct projects formultiple groups within FEMA \n</DD><DD>- • Participated in screening and selection of candidates for open positions \n</DD></DL>PositionB : Senior Software Engineer\nExpierienceB : \n<DL><DD>- • Provided continuous support of FEMA.gov website and FEMA.gov applications, performed on-demand troubleshooting anduser problem resolution. \n</DD><DD>- • Collected functionality requirements from users and used them to create design documents. Communicatedbest practices in IT implementation to user groups and FEMA IT team member inorder to optimize resulting solutions. Performed subsequent application design and implementation. Insured compliance withvarious security policies and procedures. \n</DD><DD>- • Conducted meetings and user training sessions. \n</DD><DD>- • Designed and developed a Ruby on Rails application with Oracle relational database inorder to catalog and audit system components of FEMA.gov and related systems \n</DD><DD>- • Designed and developed over 25 web-based applications and the corresponding Administration Tools usingJSP/Struts and Servlet-based architecture with Oracle relational database. Functionality included validated data entry, administrativeand reporting tools with secured access. Subsequent releases included functional and security enhancements aswell as further functionality enhancements. \n</DD></DL>"], ["updated_at", Fri, 07 Mar 2014 05:25:27 UTC +00:00]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/j_data/2
+Completed 302 Found in 22ms (ActiveRecord: 14.7ms)
+
+
+Started GET "/j_data/2" for 10.0.2.2 at 2014-03-07 05:25:27 +0000
+Processing by JDataController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mJDatum Load (0.8ms)[0m  SELECT "j_data".* FROM "j_data" WHERE "j_data"."id" = ? LIMIT 1  [["id", "2"]]
+  Rendered j_data/show.html.erb within layouts/application (23.8ms)
+Completed 200 OK in 71ms (Views: 68.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 10.0.2.2 at 2014-03-11 03:54:31 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by JDataController#index as HTML
+  [1m[35mJDatum Load (1.4ms)[0m  SELECT "j_data".* FROM "j_data"
+  Rendered j_data/index.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 328ms (Views: 296.6ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/j_data.css?body=1" for 10.0.2.2 at 2014-03-11 03:54:32 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2014-03-11 03:54:32 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2014-03-11 03:54:32 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2014-03-11 03:54:32 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2014-03-11 03:54:32 +0000
+
+
+Started GET "/css/bootstrap.min.css" for 10.0.2.2 at 2014-03-11 03:54:32 +0000
+
+ActionController::RoutingError (No route matches [GET] "/css/bootstrap.min.css"):
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/vagrant/.rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/vagrant/.rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/vagrant/.rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.6ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.9ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (11.0ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (29.2ms)
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2014-03-11 03:54:32 +0000
+
+
+Started GET "/assets/j_data.js?body=1" for 10.0.2.2 at 2014-03-11 03:54:32 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2014-03-11 03:54:32 +0000
+
+
+Started GET "/js/bootstrap.min.js" for 10.0.2.2 at 2014-03-11 03:54:32 +0000
+
+ActionController::RoutingError (No route matches [GET] "/js/bootstrap.min.js"):
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/vagrant/.rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/vagrant/.rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/vagrant/.rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.7ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.8ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (13.7ms)
+
+
+Started GET "/j_data/new" for 10.0.2.2 at 2014-03-11 03:54:35 +0000
+Processing by JDataController#new as HTML
+  Rendered j_data/_form.html.erb (22.5ms)
+  Rendered j_data/new.html.erb within layouts/application (40.9ms)
+Completed 200 OK in 89ms (Views: 87.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2014-03-17 04:29:07 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActiveRecord::PendingMigrationError (Migrations are pending; run 'bin/rake db:migrate RAILS_ENV=development' to resolve this issue.):
+  activerecord (4.0.2) lib/active_record/migration.rb:379:in `check_pending!'
+  activerecord (4.0.2) lib/active_record/migration.rb:366:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:373:in `_run__1048207810353204012__call__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/vagrant/.rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/vagrant/.rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/vagrant/.rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.4ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.7ms)
+
+
+Started GET "/" for 10.0.2.2 at 2014-03-17 04:29:51 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActiveRecord::PendingMigrationError (Migrations are pending; run 'bin/rake db:migrate RAILS_ENV=development' to resolve this issue.):
+  activerecord (4.0.2) lib/active_record/migration.rb:379:in `check_pending!'
+  activerecord (4.0.2) lib/active_record/migration.rb:366:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:373:in `_run__2066018457142759120__call__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/vagrant/.rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/vagrant/.rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/vagrant/.rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.4ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.7ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.8ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateWriteIns (20140317042622)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (2.0ms)[0m  [1mCREATE TABLE "write_ins" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "address" varchar(255), "input" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140317042622"]]
+  [1m[36m (1.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.7ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 10.0.2.2 at 2014-03-17 04:31:05 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by JDataController#index as HTML
+  [1m[35mJDatum Load (1.4ms)[0m  SELECT "j_data".* FROM "j_data"
+  Rendered j_data/index.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 659ms (Views: 622.0ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/j_data.css?body=1" for 10.0.2.2 at 2014-03-17 04:31:06 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2014-03-17 04:31:06 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2014-03-17 04:31:06 +0000
+
+
+Started GET "/assets/write_ins.css?body=1" for 10.0.2.2 at 2014-03-17 04:31:06 +0000
+
+
+Started GET "/css/bootstrap.min.css" for 10.0.2.2 at 2014-03-17 04:31:06 +0000
+
+ActionController::RoutingError (No route matches [GET] "/css/bootstrap.min.css"):
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/vagrant/.rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/vagrant/.rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/vagrant/.rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.7ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.3ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (32.5ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (50.9ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2014-03-17 04:31:06 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2014-03-17 04:31:06 +0000
+
+
+Started GET "/assets/j_data.js?body=1" for 10.0.2.2 at 2014-03-17 04:31:06 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2014-03-17 04:31:06 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2014-03-17 04:31:06 +0000
+
+
+Started GET "/assets/write_ins.js?body=1" for 10.0.2.2 at 2014-03-17 04:31:06 +0000
+
+
+Started GET "/js/bootstrap.min.js" for 10.0.2.2 at 2014-03-17 04:31:06 +0000
+
+ActionController::RoutingError (No route matches [GET] "/js/bootstrap.min.js"):
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/vagrant/.rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/vagrant/.rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/vagrant/.rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.6ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.6ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (16.6ms)
+
+
+Started GET "/j_data/new" for 10.0.2.2 at 2014-03-17 04:31:17 +0000
+Processing by JDataController#new as HTML
+  Rendered j_data/_form.html.erb (16.1ms)
+  Rendered j_data/new.html.erb within layouts/application (32.3ms)
+Completed 200 OK in 91ms (Views: 89.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/j_data" for 10.0.2.2 at 2014-03-17 04:31:19 +0000
+Processing by JDataController#index as HTML
+  [1m[36mJDatum Load (0.9ms)[0m  [1mSELECT "j_data".* FROM "j_data"[0m
+  Rendered j_data/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 62ms (Views: 60.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/js/bootstrap.min.js" for 10.0.2.2 at 2014-03-17 04:31:19 +0000
+
+ActionController::RoutingError (No route matches [GET] "/js/bootstrap.min.js"):
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/vagrant/.rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/vagrant/.rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/vagrant/.rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.7ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (12.6ms)
+
+
+Started GET "/css/bootstrap.min.css" for 10.0.2.2 at 2014-03-17 04:31:19 +0000
+
+ActionController::RoutingError (No route matches [GET] "/css/bootstrap.min.css"):
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/vagrant/.rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/vagrant/.rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/vagrant/.rvm/rubies/ruby-2.0.0-p451/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.6ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.2ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.7ms)
+  Rendered /home/vagrant/.rvm/gems/ruby-2.0.0-p451/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (12.7ms)

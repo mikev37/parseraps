@@ -1,0 +1,23 @@
+
+<%= form_for(@j_datum) do |f| %>
+  <% if @j_datum.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@j_datum.errors.count, "error") %> prohibited this j_datum from being saved:</h2>
+
+      <ul>
+      <% @j_datum.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <center><div class="field">
+    <%= f.label :jInput %><br>
+    <%= f.text_area :jInput ,:cols => 100, :rows => 25%>
+  </div></center>
+  
+  <center><div class="actions">
+    <%= f.submit %>
+  </div></center>
+<% end %>

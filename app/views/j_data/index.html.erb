@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+  </head>
+
+  <body style = "background-color:#333">
+    <center><h1 style = "color:#000">JSON Parser App</h1></center>
+    <div id = "container" style = "color:#E8E8E8">
+      <%= link_to 'Parse New File', new_j_datum_path %>
+    </div>
+    <div>
+      <table>
+        <thead>
+          <tr>
+            <th style = "color:#fff">Json Files</th>
+            <!-- <th style = "color:#fff">Formatted Strings</th> -->
+          </tr>
+        </thead>
+        <% @j_data.each do |j_datum| %>
+          <tr>
+            <td style = "color:#fff"><%= j_datum.jInput %></td>
+            <!-- <td style = "color:#fff"><%= j_datum.jOutput %></td> -->
+            <td><%= link_to 'Show', j_datum %></td>
+            <td><%= link_to 'Edit', edit_j_datum_path(j_datum) %></td>
+            <td><%= link_to 'Destroy', j_datum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </table>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
+

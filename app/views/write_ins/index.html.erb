@@ -1,0 +1,29 @@
+<h1>Listing write_ins</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Address</th>
+      <th>Input</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @write_ins.each do |write_in| %>
+      <tr>
+        <td><%= write_in.address %></td>
+        <td><%= write_in.input %></td>
+        <td><%= link_to 'Show', write_in %></td>
+        <td><%= link_to 'Edit', edit_write_in_path(write_in) %></td>
+        <td><%= link_to 'Destroy', write_in, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Write in', new_write_in_path %>

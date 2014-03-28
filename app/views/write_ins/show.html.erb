@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @write_in.address %>
+</p>
+
+<p>
+  <strong>Input:</strong>
+  <%= @write_in.input %>
+</p>
+
+<%= link_to 'Edit', edit_write_in_path(@write_in) %> |
+<%= link_to 'Back', write_ins_path %>

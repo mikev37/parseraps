@@ -1,0 +1,2 @@
+module JDataHelper
+end

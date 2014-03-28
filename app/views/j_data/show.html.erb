@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<!-- <p>
+  <strong>Input:</strong>
+  <%= @j_datum.jInput %>
+</p> -->
+<body style = "background-color:#333">
+	<p>
+	  <center><h1 style = "color:#000">Formatted Output</h1></center>
+	  <strong style = "color:#fff"><%= simple_format(@j_datum.jOutput) %></strong>
+	</p>
+
+	<%= link_to 'Edit', edit_j_datum_path(@j_datum) %> |
+	<%= link_to 'Back', j_data_path %>
+</body>
